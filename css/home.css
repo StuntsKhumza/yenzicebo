@@ -1,0 +1,25 @@
+.bg-faded-c {
+        background-color: #fff;
+}
+
+.main-header{
+        width: 100%;
+        background-color: #fff;
+}
+
+body{
+        
+}
+
+.main-body h4 {
+        text-align: center;
+    margin-bottom: 40px;
+    font-size: 46px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    color: #212121;
+}
+
+#map {
+    width:300px;height:300px;background: #ccc;    
+}

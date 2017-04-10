@@ -1,79 +1,73 @@
-<?php
-/**
- * Index for our theme
- *
- * @package WordPress
- * @subpackage Integral
- * @since Integral 1.0
- */
-?>
-<?php get_header(); ?>
 
-<?php { if ( is_front_page() ) { get_template_part('sections/default'); } } ?>
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<div class="spacer"></div>
+        <title>YC</title>
+        <!--
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js" integrity="sha384-XTs3FgkjiBgo8qjEjBk0tGmf3wPrWtA6coPfQDfFEY8AnYJwjalXCiosYRBIBZX8" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
 
-<div class="container">
-	
-    <div class="row">
+	    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-cookie/4.1.0/angular-cookie.js"></script>
 
-		<div class="<?php if ( is_active_sidebar( 'rightbar' ) ) : ?>col-md-8<?php else : ?>col-md-12<?php endif; ?>">
-			
-            <div class="content">
-				
-			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-			
-			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-			    
-                <?php if(get_the_post_thumbnail()) { ?><figure class="post-image"><a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('integral-post-thumbnails',array('class'=>'img-responsive')); ?></a></figure><?php } ?>
-                
-                <div class="clearfix"></div>
-                
-                <h2 class="entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-                
-                <ul class="pagemeta">
-                    
-                    <li><i class="fa fa-clock-o"></i><?php the_time('F jS, Y') ?></li>
-                    
-                    <li><i class="fa fa-bookmark"></i><?php the_category(', '); ?></li>
-                    
-                    <li><i class="fa fa-comment"></i><?php
-                            printf( _n( '1 Comment', '%1$s Comments', get_comments_number(), 'integral' ),
-                                number_format_i18n( get_comments_number() ), get_the_title() ); ?></a></li>
-                    
-                	<li><i class="fa fa-user"></i><a href="<?php echo esc_url(get_author_posts_url(get_the_author_meta( 'ID' ))); ?>"><?php the_author(); ?></a></li>
-                
-                </ul>
-                
-                <div class="entry">
-                    
-                    <?php the_excerpt(); ?>
-                
+        -->
+
+        <link rel="stylesheet" href="configs/bootstrap.min.css" >
+
+        <link rel="icon" href="img/icon.png">
+       
+        <script src="configs/jquery.min.js"></script>
+        <script src="configs/tether.min.js"></script>
+        <script src="configs/bootstrap.min.js"></script>
+	    <script src="configs/angular.min.js"></script>
+
+<link rel="stylesheet" href="css/w3.css" >
+<link rel="stylesheet" href="css/nav.css" >
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
+
+        <link rel="stylesheet" href="css/home.css">
+        <link rel="stylesheet" href="css/utils.css">
+
+        <script src="js/modules/main.js"></script>
+        <script src="js/modules/home/home.js"></script>
+        <script src="js/modules/utils/nav/nav.js"></script>
+
+        
+ <script>
+        function isNumberKey(evt)
+       {
+          var charCode = (evt.which) ? evt.which : evt.keyCode;
+          if (charCode != 46 && charCode > 31 
+            && (charCode < 48 || charCode > 57))
+             return false;
+
+          return true;
+       }
+    </script>
+    <body ng-app="main-app">
+        <home></home>
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <img src="img/icons/social/facebook" height="40"><img src="img/icons/social/twitter" height="40"><img src="img/icons/social/linkedin" height="40">
+                    </div>
                 </div>
-			    
-                <div class="clearfix"></div>
-			 
-            </article> <!--post -->
-			 
-            <?php endwhile;?>
-			
-            <?php endif; ?>
-			
-			<?php the_posts_pagination( array(
-			    'mid_size' => 2,
-			    'prev_text' => __( 'Previous', 'integral' ),
-			    'next_text' => __( 'Next', 'integral' ),
-			    'screen_reader_text' => __( '&nbsp;', 'integral' ),
-			) ); ?>
+                Website designed by <b><a href="#">Web Demos</a></b>
+            </div>
+        </footer>
+    </body>
+</html>
 
-			</div><!--content-->
-		
-        </div>
-
-		<?php get_sidebar(); ?>
-
-	</div>
-
-</div>
-
-<?php get_footer(); ?>

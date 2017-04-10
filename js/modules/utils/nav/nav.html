@@ -1,0 +1,20 @@
+
+<nav class="nav-c">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="brand">
+                <img src="img/logo.png" height="60">
+                <br><br>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <ul class="nav-c-ul">
+                <li ng-class="{'active-c': navObj.activeDir == 1}"><a ng-click="navCtr.goto(1)">HOME</a></li>
+                <li ng-class="{'active-c': navObj.activeDir == 2}"><a ng-click="navCtr.goto(2)">ABOUT</a></li>
+                <li ng-class="{'active-c': navObj.activeDir == 3}"><a ng-click="navCtr.goto(3)">SERVICES</a></li>
+                <li ng-class="{'active-c': navObj.activeDir == 4}"><a ng-click="navCtr.goto(4)">CONTACT</a></li>
+                <li ng-class="{'active-c': navObj.activeDir == 5}"><a ng-click="navCtr.goto(4)">TEAM</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>

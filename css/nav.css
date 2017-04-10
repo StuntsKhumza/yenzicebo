@@ -1,0 +1,47 @@
+  .nav-c {
+        padding: 15px;
+    }
+    
+    .nav-c ul {
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    .nav-c ul li {
+        list-style: none;
+        float: left;
+        transition: 0.3s;
+        margin: 10px;
+    }
+    
+    .active-c {
+        border-bottom: 1px solid #f0ad4e;
+    }
+    
+    .nav-c-ul li:hover {
+        border-bottom: 1px solid #f0ad4e;
+    }
+    
+    .nav-c ul li a {
+        height: 45px;
+        display: block;
+        text-decoration: none;
+        color: #2B3238;
+        line-height: 30px;
+        padding: 5px;
+    }
+    
+    @media all and (max-width: 380px) {
+        .nav-c ul li {
+           
+            float: none;
+           width: 100%;
+            margin: 10px;
+        }
+ .nav-c ul{
+     width: 100%;
+ }
+        .nav-c ul li a {
+            width: 100%;
+        }
+    }

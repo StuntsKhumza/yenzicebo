@@ -1,0 +1,92 @@
+<hr>
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+
+<h4 id="about" name="about">CONTACT US</h4>
+
+<div class="row">
+    <div class="col-md-4">
+        <div id="map"></div>
+
+        <br>
+        <br>
+
+        <strong>Thando Vilakazi </strong><br> E-mail: <a href="mailto:thando@yenzincebo.co.za">thando@yenzincebo.co.za</a>
+        <br> Phone: +27 76 147 8129
+        <br><br>
+        <strong> Kwanele </strong><br> E-mail: <a href="mailto:kwanele@yenzincebo.co.za">kwanele@yenzincebo.co.za</a>
+        <br>
+        <br> No. 371 | Maponya Mall | Chris Hani Rd | Ext. 5, Klipspruit | Soweto 
+        
+        <br>T: +27 11 938 4038 
+        <br>
+        F: +27 11 938 1913 E:
+        <br>
+        <a href="mailto: info@yenzincebo.co.za"> info@yenzincebo.co.za</a>
+       <br>  <br>
+    </div>
+    <div class="col-md-8">
+        <div class="card card-block">
+            <form>
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <label>Full Name:</label>
+                        <br>
+                        <input type="text" class="form-control input-md" placeholder="">
+
+                    </div>
+                    <div class="col-md-6">
+                        <label>Phone Number:</label>
+                        <br>
+                        <input type="number" class="form-control input-md" placeholder="">
+                    </div>
+                </div> <br>
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <label>E-mail:</label>
+                        <br>
+                        <input type="text" class="form-control input-md" placeholder="">
+
+                    </div>
+
+                </div> <br>
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <label>Message:</label>
+                        <br>
+                        <textarea class="form-control"></textarea>
+
+                    </div>
+
+                </div>
+
+                <br> <br>
+                <div class="pull-right">
+                    <input type="button" class="btn btn-default" value="Send">
+                    <input type="button" class="btn btn-danger" value="Clear Form">
+                </div>
+
+
+            </form>
+        </div>
+    </div>
+</div>
+
+  <br>  <br>
+
+<script>
+    myMap();
+    function myMap() {
+        var mapOptions = {
+            center: new google.maps.LatLng(-26.056642, 27.921710),
+            zoom: 15,
+            mapTypeId: google.maps.MapTypeId.MAP
+        }
+        var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+    }
+
+</script>
