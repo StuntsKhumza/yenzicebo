@@ -62,7 +62,7 @@ and open the template in the editor.
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <img src="img/icons/social/facebook" height="40"><img src="img/icons/social/twitter" height="40"><img src="img/icons/social/linkedin" height="40">
+                        <img src="img/icons/social/facebook.png" height="40"><img src="img/icons/social/twitter.png" height="40"><img src="img/icons/social/linkedin.png" height="40">
                     </div>
                 </div>
                 Website designed by <b><a href="#">Web Demos</a></b>
