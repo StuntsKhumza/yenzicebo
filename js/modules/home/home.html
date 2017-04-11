@@ -53,9 +53,9 @@
     <div class="container">
 
 
-        <home-home ng-if="navObj.activeDir == 1"></home-home>
-        <about ng-if="navObj.activeDir == 2"></about>
-        <services ng-if="navObj.activeDir == 3"></services>
+        <home-home ng-show="navObj.activeDir == 1"></home-home>
+        <about ng-show="navObj.activeDir == 2"></about>
+        <services ng-show="navObj.activeDir == 3"></services>
         <contact ng-show="navObj.activeDir == 4"></contact>
 
 
