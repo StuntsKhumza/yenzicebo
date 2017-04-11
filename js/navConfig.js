@@ -1,29 +1,85 @@
-/* var i;
-  var x = document.getElementsByClassName("mySlides");
+var width_limit = 566;
 
-  var dots = document.getElementsByClassName("demo");
-  
-  if (dots.length == 0) { return; }
+var addEvent = function (object, type, callback) {
 
+  if (object == null || typeof (object) == 'undefined') return;
 
-  if (n > x.length) { slideIndex = 1 }
-  if (n < 1) { slideIndex = x.length }
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
+  if (object.addEventListener) {
+    object.addEventListener(type, callback, false);
+  } else if (object.attachEvent) {
+    object.attachEvent('on' + type, callback);
+  } else {
+    object['on' + type] = callback;
   }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" w3-white", "");
+
+
+};
+
+addEvent(window, 'resize', test)
+
+function test() {
+
+
+  if (window.innerWidth < width_limit) {
+
+    if (getState() == 'block') {
+      document.getElementsByClassName("nav-c-ul")[0].style.display = "none";
+    }
+
+
+  } else if (window.innerWidth > width_limit + 1) {
+    if (getState() == 'none') {
+      document.getElementsByClassName("nav-c-ul")[0].style.display = "block";
+    }
   }
-  x[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " w3-white";
+}
 
-*/
+function getState() {
 
+  var state = getElementsByClassName("nav-c-ul");
 
-  function nav_toggle(){
-var ul_list = document.getElementsByClassName("nav-c-ul");
-console.log("asd");
-
-      ul_list[0].style.display = "block";
-
+  if (state[0] != null) {
+    state = window.getComputedStyle(state[0]).getPropertyValue('display');
   }
+
+  return state;
+
+}
+
+function showNav() {
+  var state = document.getElementsByClassName("nav-c-ul");
+
+  state = window.getComputedStyle(state[0]).getPropertyValue('display');
+
+  switch (state) {
+    case "none":
+      document.getElementsByClassName("nav-c-ul")[0].style.display = "block";
+      animateButton(true);
+      break;
+    case "block":
+      document.getElementsByClassName("nav-c-ul")[0].style.display = "none";
+      animateButton(false);
+      break;
+  }
+
+}
+
+function animateButton(state) {
+
+  //get button
+  var btn = document.getElementsByClassName('nav-c-toggle')[0];
+
+  //check which rule to apply
+  if (state) {
+
+    //rotate button 90deg
+    btn.style.transform = "rotate(90deg)";
+
+  } else {
+
+    //rotate button 0deg
+    btn.style.transform = "rotate(0deg)";
+  }
+
+
+}
