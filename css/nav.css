@@ -30,6 +30,20 @@
         line-height: 30px;
         padding: 5px;
     }
+
+    .nav-c-toggle{
+         position: relative;
+    float: right;
+    padding: 9px 10px;
+    margin-top: 8px;
+    margin-right: 15px;
+    margin-bottom: 8px;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    z-index: 1;
+    }
     
     @media all and (max-width: 380px) {
         .nav-c ul li {
@@ -38,8 +52,11 @@
            width: 100%;
             margin: 10px;
         }
+
  .nav-c ul{
      width: 100%;
+     display: none;
+     position: fixed;
  }
         .nav-c ul li a {
             width: 100%;

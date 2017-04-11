@@ -43,7 +43,7 @@ and open the template in the editor.
         <script src="js/modules/main.js"></script>
         <script src="js/modules/home/home.js"></script>
         <script src="js/modules/utils/nav/nav.js"></script>
-
+        <script  src="js/navConfig.js"></script>
         
  <script>
         function isNumberKey(evt)
