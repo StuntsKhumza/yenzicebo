@@ -82,15 +82,16 @@ function animateButton(state) {
     btn.style.transform = "rotate(0deg)";
   }
 
-
 }
 
 function hideMenu(){
+  
    var state = document.getElementsByClassName("nav-c-ul")[0];
 
    if (state != null){
 
      state.style.display = 'none';
+
      animateButton(false);
    }
 }
