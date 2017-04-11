@@ -24,6 +24,7 @@ function test() {
 
     if (getState() == 'block') {
       document.getElementsByClassName("nav-c-ul")[0].style.display = "none";
+      
     }
 
 
@@ -82,4 +83,14 @@ function animateButton(state) {
   }
 
 
+}
+
+function hideMenu(){
+   var state = document.getElementsByClassName("nav-c-ul")[0];
+
+   if (state != null){
+
+     state.style.display = 'none';
+     animateButton(false);
+   }
 }

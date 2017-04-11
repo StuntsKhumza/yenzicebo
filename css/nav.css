@@ -45,6 +45,7 @@
     border: 1px solid transparent;
     border-radius: 4px;
     z-index: 1;
+    display: none;
     }
     
     @media all and (max-width: 380px) {
@@ -63,4 +64,8 @@
         .nav-c ul li a {
             width: 100%;
         }
+
+         .nav-c-toggle{
+             display: block;
+         }
     }

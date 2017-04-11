@@ -7,7 +7,12 @@ angular.module('nav-app', [])
             controller: function ($scope) {
 
                 this.goto = function (id) {
+                    
                    $scope.navObj.activeDir = id;
+
+                   //hide menu
+
+                   hideMenu();
                 }
 
             }
